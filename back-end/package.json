@@ -1,0 +1,40 @@
+{
+  "name": "task-creation",
+  "version": "1.0.0",
+  "description": "Users can create new tasks, providing a title, description, and deadline for each task.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wassimOubaziz/task-creation.git"
+  },
+  "keywords": [
+    "Task",
+    "creation",
+    "Create",
+    "task",
+    "form",
+    "details"
+  ],
+  "author": "Wassim Oubaziz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wassimOubaziz/task-creation/issues"
+  },
+  "homepage": "https://github.com/wassimOubaziz/task-creation#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cron": "^2.3.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^7.3.4",
+    "nodemailer": "^6.9.3",
+    "password-validator": "^5.3.0",
+    "util": "^0.12.5"
+  }
+}
