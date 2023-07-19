@@ -6,6 +6,7 @@ import SignInPage from "./pages/IndexPages/SignInPage";
 import SignUpPage from "./pages/IndexPages/SignUpPage";
 import ProtectedRoute from "./pages/ProtectedRoute/ProtectedRoute";
 import HomePage from "./pages/HomePages/HomePage";
+import ProfilePage from "./pages/HomePages/ProfilePage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
       <Route path="/home" element={<ProtectedRoute />}>
         <Route index element={<HomePage />} />
+        <Route path="profile" element={<ProfilePage />} />
       </Route>
     </Routes>
   );

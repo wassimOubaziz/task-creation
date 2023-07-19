@@ -27,7 +27,7 @@ app.use("/signin", signInRouter);
 
 //signOut route
 const signOutRouter = require("./routers/signOutRoute");
-app.use("/signout", signOutRouter);
+app.use("/signout", protect, signOutRouter);
 
 //signUp route
 const signUpRouter = require("./routers/signUpRoute");
@@ -39,7 +39,7 @@ app.use("/validate", validateRouter);
 
 //User route
 const userRouter = require("./routers/userRoute");
-app.use("/user", userRouter);
+app.use("/user", protect, userRouter);
 
 app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });

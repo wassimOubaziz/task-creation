@@ -26,8 +26,12 @@ function SignInPage() {
       password,
     })
       .then((response) => {
-        console.log(response.data);
-        setCookie("token", response.data.token);
+        //set cookie for 1 day
+        setCookie("token", response.data.token, {
+          path: "/",
+          maxAge: 86400,
+        });
+
         navigate("/home");
       })
       .catch((error) => {

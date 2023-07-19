@@ -29,6 +29,10 @@ const userSchema = new Schema(
       type: String,
       required: [true, "Username is required"],
       unique: [true, "Username already exists"],
+      maxlength: [50, "Username must be less than 50 characters"],
+      minlength: [3, "Username must be more than 3 characters"],
+      max: [50, "Username must be less than 50 characters"],
+      min: [3, "Username must be more than 3 characters"],
     },
     email: {
       type: String,

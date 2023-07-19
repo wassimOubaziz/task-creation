@@ -3,16 +3,18 @@ import { Link } from "react-router-dom";
 import taskCreationImage from "./images/task-creation.jpg";
 import taskManagementImage from "./images/task-management.png";
 import taskRemindersImage from "./images/task-reminders.png";
+import NavBarHome from "../../components/NavBarHome.component";
 
 function HomePage() {
   return (
     <div className="container">
+      <NavBarHome />
       <h1 className="text-center mt-5">Welcome to Task Manager</h1>
       <p className="text-center">We offer the following services:</p>
 
       <div className="row justify-content-center">
         <div className="col-md-4">
-          <div className="card shadow">
+          <div className="card shadow" style={{ marginBottom: "20px" }}>
             <img
               src={taskCreationImage}
               className="card-img-top"
@@ -32,7 +34,7 @@ function HomePage() {
         </div>
 
         <div className="col-md-4">
-          <div className="card shadow">
+          <div className="card shadow" style={{ marginBottom: "20px" }}>
             <img
               src={taskManagementImage}
               className="card-img-top"
@@ -52,7 +54,7 @@ function HomePage() {
         </div>
 
         <div className="col-md-4">
-          <div className="card shadow">
+          <div className="card shadow" style={{ marginBottom: "20px" }}>
             <img
               src={taskRemindersImage}
               className="card-img-top"

@@ -42,7 +42,7 @@ router.route("/").post(async (req, res) => {
     user.isValide = undefined;
 
     //sending cookie to client side
-    res.cookie("jwt", token, {
+    res.cookie("token", token, {
       expires: new Date(
         Date.now() + process.env.COOKIE_EXPIRE_TIME * 24 * 60 * 60 * 1000
       ),
