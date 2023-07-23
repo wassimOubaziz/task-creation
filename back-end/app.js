@@ -45,6 +45,10 @@ app.get("/", (req, res) => {
   res.json({ message: "Hello World!" });
 });
 
+//Task route
+const taskRouter = require("./routers/taskRoute");
+app.use("/tasks", protect, taskRouter);
+
 //chekc token validation
 const token = require("./routers/tokenValidation");
 app.use("/token", protect, token);

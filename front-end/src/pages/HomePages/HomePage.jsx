@@ -26,7 +26,7 @@ function HomePage() {
               <p className="card-text">
                 Create new tasks with a title, description, and deadline.
               </p>
-              <Link to="/create-task" className="btn btn-primary">
+              <Link to="/home/create-task" className="btn btn-primary">
                 Create Task
               </Link>
             </div>
@@ -46,7 +46,7 @@ function HomePage() {
               <p className="card-text">
                 Manage your tasks, update their status, and track progress.
               </p>
-              <Link to="/task-management" className="btn btn-primary">
+              <Link to="/home/task-management" className="btn btn-primary">
                 Manage Tasks
               </Link>
             </div>
@@ -66,7 +66,7 @@ function HomePage() {
               <p className="card-text">
                 Receive notifications and reminders for upcoming task deadlines.
               </p>
-              <Link to="/task-reminders" className="btn btn-primary">
+              <Link to="/home/task-reminders" className="btn btn-primary">
                 Set Reminders
               </Link>
             </div>

@@ -1,8 +1,6 @@
 const express = require("express");
 
 const router = express.Router();
-const nodeMailer = require("nodemailer");
-const jwt = require("jsonwebtoken");
 const User = require("../modules/User");
 
 /******************************************* User Router ******************************************** */

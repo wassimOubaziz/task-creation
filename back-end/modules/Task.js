@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const taskSchema = new Schema(
   {
-    user: {
+    creator: {
       type: Schema.Types.ObjectId,
       ref: "User",
       required: [true, "User is required to have a task"],
