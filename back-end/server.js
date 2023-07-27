@@ -5,18 +5,19 @@ const app = require("./app");
 const port = 4000;
 
 // Connect to MongoDB
-const URL = process.env.URL;
+const BD = process.env.DATABASE.replace(
+  "<password>",
+  process.env.DATABASE_PASSWORD
+);
 
-mongoose.set("strictQuery", true);
 mongoose
-  .connect(URL, {
+  .connect(BD, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => {
-    console.log("connected to mongo");
-  });
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
+  .then(() =>
+    app.listen(port, () => {
+      console.log(`Listening at http://localhost:${port}`);
+    })
+  )
+  .catch((err) => console.log("DB connection failed", err));

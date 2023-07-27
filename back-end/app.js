@@ -41,10 +41,6 @@ app.use("/validate", validateRouter);
 const userRouter = require("./routers/userRoute");
 app.use("/user", protect, userRouter);
 
-app.get("/", (req, res) => {
-  res.json({ message: "Hello World!" });
-});
-
 //Task route
 const taskRouter = require("./routers/taskRoute");
 app.use("/tasks", protect, taskRouter);

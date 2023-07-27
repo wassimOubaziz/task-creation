@@ -16,6 +16,24 @@ function SignUpPage() {
     }
   }, [cookies.token, navigate]);
 
+  const submitInfo = (e) => {
+    e.preventDefault();
+    const userName = document.getElementById("username").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    ax.post("/signup", {
+      userName,
+      email,
+      password,
+    })
+      .then((res) => {
+        navigate("/login");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div className="container">
       <NavBar />
@@ -67,7 +85,7 @@ function SignUpPage() {
                 <div className="col-md-6">
                   <div className="card-body">
                     <h2 className="display-4 mb-4">Sign Up</h2>
-                    <form>
+                    <form onSubmit={submitInfo}>
                       <div className="form-group">
                         <label htmlFor="username">Username</label>
                         <input
