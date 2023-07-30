@@ -13,7 +13,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //cors
 app.use(
   cors({
-    origin: ["http://localhost:3000", "www.localhost:3000", "localhost:3000"],
+    origin: [
+      "http://localhost:3000",
+      "www.localhost:3000",
+      "localhost:3000",
+      "https://tiny-raindrop-ae7232.netlify.app",
+      "https://www.tiny-raindrop-ae7232.netlify.app",
+      "www.tiny-raindrop-ae7232.netlify.app",
+    ],
     credentials: true,
     exposedHeaders: ["Set-Cookie"],
   })
