@@ -17,7 +17,7 @@ mongoose
   })
   .then(() =>
     app.listen(port, () => {
-      console.log(`Listening at http://localhost:${port}`);
+      console.log(`Listening at ${process.env.SERVER_URL}`);
     })
   )
   .catch((err) => console.log("DB connection failed", err));
